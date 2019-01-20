@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    var a = [10, 19, 81, 7, 6, 53, 4, 32, 2, 1];
+
+    for (var j = 0; j < a.length - 1; j++) {
+        var tmp, min;
+
+        for (var i = 0; i < a.length - 1; i++) {
+            if (a[i] > a[i + 1]) {
+                min = a[i + 1];
+                tmp = i + 1;
+            } else {
+                min = a[i];
+                tmp = i;
+            }
+
+            a[tmp] = a[i];
+            a[i] = min;
+        }
+    }
+    
+    console.log(a);
+  </script>
+</html>
